@@ -1,0 +1,1 @@
+/Users/karan/.dotfiles/zprezto//modules/syntax-highlighting/external/highlighters/main/main-highlighter.zsh

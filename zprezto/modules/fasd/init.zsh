@@ -1,0 +1,1 @@
+/Users/karan/.dotfiles/zprezto//modules/fasd/init.zsh
