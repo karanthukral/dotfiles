@@ -1,1 +1,12 @@
-/Users/karan/.dotfiles/zprezto//modules/osx/functions/_manb_mand_manp
+#compdef mand manp
+#autoload
+
+#
+# Completes mand and manp.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+_man
+

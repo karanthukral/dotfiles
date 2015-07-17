@@ -1,1 +1,12 @@
-/Users/karan/.dotfiles/zprezto//modules/utility/functions/_dut
+#compdef dut
+#autoload
+
+#
+# Completes dut.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+_du
+

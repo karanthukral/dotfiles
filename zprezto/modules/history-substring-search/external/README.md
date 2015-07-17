@@ -1,1 +1,0 @@
-/Users/karan/.dotfiles/zprezto//modules/history-substring-search/external/README.md

@@ -1,1 +1,0 @@
-/Users/karan/.dotfiles/zprezto//modules/history-substring-search/external/zsh-history-substring-search.plugin.zsh

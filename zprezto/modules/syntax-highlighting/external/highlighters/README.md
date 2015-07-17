@@ -1,1 +1,0 @@
-/Users/karan/.dotfiles/zprezto//modules/syntax-highlighting/external/highlighters/README.md

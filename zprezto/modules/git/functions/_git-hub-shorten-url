@@ -1,1 +1,12 @@
-/Users/karan/.dotfiles/zprezto//modules/git/functions/_git-hub-shorten-url
+#compdef git-hub-shorten-url
+#autoload
+
+#
+# Completes git-hub-shorten-url.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+_arguments '1:url:' && return 0
+
