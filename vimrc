@@ -7,7 +7,11 @@ syntax enable " syntax highlighting
 " Theme
 set t_Co=16
 set background=dark
-colorscheme slate 
+colorscheme solarized 
+hi Normal ctermbg=none
+
+" Remove the delay when escaping from insert-mode
+set timeoutlen=1000 ttimeoutlen=0
 
 " Indents
 set smartcase   " search intelligently
@@ -70,11 +74,46 @@ autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> 
 autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
 augroup END
 
+set clipboard=unnamed
+
+" nerdtree
+let NERDTreeHijackNetrw = 0
+nmap gt :NERDTreeToggle<CR>
+nmap gf :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" use silver searcher with ack.vim (faster)
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" UltiSnips 
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips/'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger = '<c-e>'  
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical" " :UltiSnipsEdit to split your window.
+
+" Vim-Go Customizations
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'fatih/vim-go'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'SirVer/ultisnips'
+Plug 'ervandew/supertab'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
