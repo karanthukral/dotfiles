@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 alias bx="bundle exec"
 alias subl="open -a 'Sublime Text'"
+alias vi="vim"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"

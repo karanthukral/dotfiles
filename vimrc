@@ -7,8 +7,8 @@ syntax enable " syntax highlighting
 " Theme
 set t_Co=16
 set background=dark
-colorscheme solarized 
-hi Normal ctermbg=none
+colorscheme slate 
+"hi Normal ctermbg=none
 
 " Remove the delay when escaping from insert-mode
 set timeoutlen=1000 ttimeoutlen=0
