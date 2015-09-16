@@ -14,6 +14,9 @@ fi
 alias bx="bundle exec"
 alias subl="open -a 'Sublime Text'"
 alias vi="vim"
+alias vu="vagrant up"
+alias vssh="vagrant ssh"
+alias vh="vagrant halt"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"

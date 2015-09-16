@@ -5,9 +5,9 @@ let g:airline_powerline_fonts = 1 " powerline font stuff
 syntax enable " syntax highlighting
 
 " Theme
-set t_Co=16
+set t_Co=256
 set background=dark
-colorscheme slate 
+colorscheme slate  
 "hi Normal ctermbg=none
 
 " Remove the delay when escaping from insert-mode
@@ -16,6 +16,12 @@ set timeoutlen=1000 ttimeoutlen=0
 " Indents
 set smartcase   " search intelligently
 set smartindent
+set autoindent
+
+" Soft Tabs, 2 Spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " Searching
 set hlsearch  " highlight searches, and search incrementaly
