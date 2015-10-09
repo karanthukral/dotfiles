@@ -7,8 +7,14 @@ syntax enable " syntax highlighting
 " Theme
 set t_Co=256
 set background=dark
-colorscheme slate  
+colorscheme twilight256 
 "hi Normal ctermbg=none
+
+" Leader Commands
+let mapleader=","
+map <Leader>r <Plug>RunFocusedSpec
+map <Leader>R <Plug>RunFocusedSpecFile
+map <Leader>e <Plug>RunMostRecentSpec
 
 " Remove the delay when escaping from insert-mode
 set timeoutlen=1000 ttimeoutlen=0
@@ -17,6 +23,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set smartcase   " search intelligently
 set smartindent
 set autoindent
+set breakindent
 
 " Soft Tabs, 2 Spaces
 set tabstop=2
@@ -90,6 +97,10 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+" CtrlP Key Bindings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " use silver searcher with ack.vim (faster)
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -121,5 +132,9 @@ Plug 'mileszs/ack.vim'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'stephenminded/vim-spec-runner'
 call plug#end()
 
