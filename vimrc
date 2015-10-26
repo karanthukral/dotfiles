@@ -25,11 +25,6 @@ set smartindent
 set autoindent
 set breakindent
 
-" Soft Tabs, 2 Spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
 " Searching
 set hlsearch  " highlight searches, and search incrementaly
 set incsearch
@@ -37,8 +32,8 @@ map <F2> <esc>:noh<cr><esc>
 set wrapscan
 
 " Tabbing
-set tabstop=4 " set tab to 4 spaces
-set shiftwidth=4
+set tabstop=2 " Soft Tabs, 2 Spaces
+set shiftwidth=2
 set expandtab
 highlight SpecialKey ctermfg=1  " highlight actual tabs
 set list
@@ -121,6 +116,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" Vim-Rubocop 
+let g:vimrubocop_config = '~/src/shopify/.rubocop.yml'
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
@@ -136,5 +134,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'stephenminded/vim-spec-runner'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ngmy/vim-rubocop'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
