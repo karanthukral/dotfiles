@@ -6,8 +6,8 @@ syntax enable " syntax highlighting
 
 " Theme
 set t_Co=256
-set background=dark
-colorscheme twilight256 
+let g:seoul256_background = 235
+colorscheme seoul256 
 "hi Normal ctermbg=none
 
 " Leader Commands
@@ -92,9 +92,15 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" CtrlP Key Bindings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" ctrl-[a-z], alt-[a-z], f[1-4], or any single character
+nnoremap <silent> <Leader><Leader> :FZF -m<CR>
+let g:fzf_action = {
+  \ 'ctrl-m': 'e',
+  \ 'ctrl-t': 'tabedit',
+  \ 'alt-j':  'botright split',
+  \ 'alt-k':  'topleft split',
+  \ 'alt-h':  'vertical topleft split',
+  \ 'alt-l':  'vertical botright split' }
 
 " use silver searcher with ack.vim (faster)
 if executable('ag')
@@ -125,7 +131,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'fatih/vim-go'
-Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
@@ -137,5 +142,6 @@ Plug 'stephenminded/vim-spec-runner'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ngmy/vim-rubocop'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
