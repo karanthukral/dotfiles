@@ -6,8 +6,8 @@ syntax enable " syntax highlighting
 
 " Theme
 set t_Co=256
-set background=dark
-colorscheme twilight256 
+let g:seoul256_background = 235
+colorscheme seoul256 
 "hi Normal ctermbg=none
 
 " Leader Commands
