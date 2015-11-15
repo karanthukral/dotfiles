@@ -30,3 +30,5 @@ alias tmux="TERM=screen-256color tmux -2"
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
