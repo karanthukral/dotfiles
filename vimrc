@@ -122,14 +122,10 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" Vim-Rubocop 
-let g:vimrubocop_config = '~/src/shopify/.rubocop.yml'
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
 Plug 'fatih/vim-go'
 Plug 'mileszs/ack.vim'
 Plug 'SirVer/ultisnips'
@@ -140,8 +136,8 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'stephenminded/vim-spec-runner'
 Plug 'kchmck/vim-coffee-script'
-Plug 'ngmy/vim-rubocop'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
