@@ -6,9 +6,10 @@ syntax enable " syntax highlighting
 
 " Theme
 set t_Co=256
-let g:seoul256_background = 235
-colorscheme seoul256 
-"hi Normal ctermbg=none
+let g:gruvbox_italic=0
+set background=dark
+let g:gruvbox_contrast_dark = "medium"
+colorscheme gruvbox 
 
 " Leader Commands
 let mapleader=","
@@ -112,7 +113,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips/'
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger = '<c-e>'  
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
 let g:UltiSnipsEditSplit="vertical" " :UltiSnipsEdit to split your window.
 
 " Vim-Go Customizations
@@ -167,5 +168,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'wikitopian/hardmode'
+Plug 'morhetz/gruvbox'
 call plug#end()
 

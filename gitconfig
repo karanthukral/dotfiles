@@ -47,4 +47,3 @@ subup = submodule update --init --recursive
 	trustExitCode = true
 [github]
 	user = karanthukral
-[ghi]
