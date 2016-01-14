@@ -6,9 +6,10 @@ syntax enable " syntax highlighting
 
 " Theme
 set t_Co=256
-let g:seoul256_background = 235
-colorscheme seoul256 
-"hi Normal ctermbg=none
+let g:gruvbox_italic=0
+set background=dark
+let g:gruvbox_contrast_dark = "medium"
+colorscheme gruvbox 
 
 " Leader Commands
 let mapleader=","
@@ -59,6 +60,10 @@ set noswapfile
 set so=10 " leave some text at the top / bottom of the screen
 
 set whichwrap+=<,>,h,l,[,] " wrap arrow keys around lines
+
+set textwidth=80
+nnoremap 0 ^
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " Key-bindings: Tabs
 imap <F1> <nop>
@@ -112,7 +117,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips/'
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger = '<c-e>'  
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
 let g:UltiSnipsEditSplit="vertical" " :UltiSnipsEdit to split your window.
 
 " Vim-Go Customizations
@@ -122,14 +127,31 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" Vim-Rubocop 
-let g:vimrubocop_config = '~/src/shopify/.rubocop.yml'
+" lightline customizations
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
 
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
 Plug 'fatih/vim-go'
 Plug 'mileszs/ack.vim'
 Plug 'SirVer/ultisnips'
@@ -140,8 +162,13 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'stephenminded/vim-spec-runner'
 Plug 'kchmck/vim-coffee-script'
-Plug 'ngmy/vim-rubocop'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'wikitopian/hardmode'
+Plug 'sjl/vitality.vim'
+Plug 'morhetz/gruvbox'
+Plug 'christoomey/vim-tmux-runner'
 call plug#end()
 

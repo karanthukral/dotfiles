@@ -17,12 +17,14 @@ alias vi="vim"
 alias vu="vagrant up"
 alias vssh="vagrant ssh"
 alias vh="vagrant halt"
-alias gityolo='git add .; git commit --amend --no-edit; git push origin +$(git rev-parse --abbrev-ref HEAD)'
+alias gityolo= "git add .; git commit --amend --no-edit; git push origin +$(git rev-parse --abbrev-ref HEAD)"
+alias knife="BUNDLE_GEMFILE=/Users/karan/.chef/Gemfile bundle exec knife"
+alias weather="go run ~/Developement/golang/go/src/github.com/jfrazelle/weather/main.go"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export GOROOT="/Users/karan/Development/golang/go"
+export GOPATH="/Users/karan/Developement/golang/go"
 
 # Make sure tmux uses all colors
 alias tmux="TERM=screen-256color tmux -2"
