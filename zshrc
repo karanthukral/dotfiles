@@ -34,3 +34,8 @@ export PATH="/usr/local/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# added by dev
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+RUBIES+=(/usr/local/Cellar/shopify-ruby/*)
