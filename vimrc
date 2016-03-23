@@ -24,7 +24,6 @@ set timeoutlen=1000 ttimeoutlen=0
 set smartcase   " search intelligently
 set smartindent
 set autoindent
-set breakindent
 
 " Searching
 set hlsearch  " highlight searches, and search incrementaly

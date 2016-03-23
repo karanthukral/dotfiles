@@ -12,8 +12,11 @@ fi
 
 # Customize to your needs...
 alias bx="bundle exec"
-alias subl="open -a 'Sublime Text'"
+alias subl="open -a 'Sublime Text 2'"
 alias vi="vim"
+alias vim="emacs"
+alias nano="emacs"
+alias subl="emacs"
 alias vu="vagrant up"
 alias vssh="vagrant ssh"
 alias vh="vagrant halt"
@@ -24,6 +27,7 @@ alias weather="go run ~/Developement/golang/go/src/github.com/jfrazelle/weather/
 export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
 export GOPATH="/Users/karan/Developement/golang/go"
 
 # Make sure tmux uses all colors
@@ -33,9 +37,9 @@ alias tmux="TERM=screen-256color tmux -2"
 export PATH="/usr/local/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
 
+# Source
+source ~/Development/work/shopify/dev/dev.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# added by dev
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-RUBIES+=(/usr/local/Cellar/shopify-ruby/*)
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
