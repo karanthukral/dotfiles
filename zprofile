@@ -74,4 +74,3 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-export GHI_TOKEN="d28ba9ce667b3db451659644075a43b3941c8afb"

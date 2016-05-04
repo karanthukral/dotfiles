@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 alias bx="bundle exec"
-alias subl="open -a 'Sublime Text 2'"
+alias subl="open -a 'Sublime Text'"
 alias vi="vim"
 alias vu="vagrant up"
 alias vssh="vagrant ssh"
@@ -25,7 +25,8 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-export GOPATH="/Users/karan/Developement/golang/go"
+export GOPATH="/Users/karan/Development/golang/go"
+export PATH=$PATH:$GOPATH/bin
 
 # Make sure tmux uses all colors
 alias tmux="TERM=screen-256color tmux -2"
