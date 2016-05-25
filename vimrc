@@ -1,21 +1,10 @@
-set laststatus=2 " to fix airline not showing
-
-let g:airline_powerline_fonts = 1 " powerline font stuff
-
 syntax enable " syntax highlighting
 
 " Theme
-set t_Co=256
-let g:gruvbox_italic=0
-set background=dark
-let g:gruvbox_contrast_dark = "medium"
-colorscheme gruvbox 
+colorscheme tender
 
 " Leader Commands
 let mapleader=","
-map <Leader>r <Plug>RunFocusedSpec
-map <Leader>R <Plug>RunFocusedSpecFile
-map <Leader>e <Plug>RunMostRecentSpec
 
 " Remove the delay when escaping from insert-mode
 set timeoutlen=1000 ttimeoutlen=0
@@ -88,14 +77,7 @@ augroup END
 
 set clipboard=unnamed
 
-" nerdtree
-let NERDTreeHijackNetrw = 0
-nmap gt :NERDTreeToggle<CR>
-nmap gf :NERDTreeFind<CR>
-let NERDTreeQuitOnOpen = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
+" FZF
 " ctrl-[a-z], alt-[a-z], f[1-4], or any single character
 nnoremap <silent> <Leader><Leader> :FZF -m<CR>
 let g:fzf_action = {
@@ -106,19 +88,6 @@ let g:fzf_action = {
   \ 'alt-h':  'vertical topleft split',
   \ 'alt-l':  'vertical botright split' }
 
-" use silver searcher with ack.vim (faster)
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-" UltiSnips 
-let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips/'
-let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UltiSnipsExpandTrigger = '<c-e>'  
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<s-z>"
-let g:UltiSnipsEditSplit="vertical" " :UltiSnipsEdit to split your window.
-
 " Vim-Go Customizations
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -126,48 +95,14 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" lightline customizations
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
-
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
-Plug 'mileszs/ack.vim'
-Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
-Plug 'stephenminded/vim-spec-runner'
-Plug 'kchmck/vim-coffee-script'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'wikitopian/hardmode'
-Plug 'sjl/vitality.vim'
-Plug 'morhetz/gruvbox'
-Plug 'christoomey/vim-tmux-runner'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jacoborus/tender'
 call plug#end()
-

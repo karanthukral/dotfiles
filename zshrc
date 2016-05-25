@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 alias bx="bundle exec"
-alias subl="open -a 'Sublime Text'"
+alias subl="open -a \"Sublime Text\""
 alias vi="vim"
 alias vu="vagrant up"
 alias vssh="vagrant ssh"
@@ -41,3 +41,9 @@ source ~/Development/work/shopify/dev/dev.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/karan/Downloads/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/karan/Downloads/google-cloud-sdk/completion.zsh.inc'
