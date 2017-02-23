@@ -1,6 +1,7 @@
 [user]
 	name = Karan Thukral
 	email = karanthukral@gmail.com
+	signingkey = 39B50864A94C84DF
 [credential]
 	helper = osxkeychain
 [core]
@@ -47,3 +48,5 @@ subup = submodule update --init --recursive
 	trustExitCode = true
 [github]
 	user = karanthukral
+[commit]
+	gpgsign = true

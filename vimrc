@@ -1,5 +1,7 @@
 syntax enable " syntax highlighting
 
+let g:jsx_ext_required = 0 "jsx syntax for js files
+
 " Theme
 colorscheme tender
 
@@ -95,6 +97,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+com! FormatJSON %!python -m json.tool
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
@@ -105,4 +109,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jacoborus/tender'
+Plug 'trevordmiller/nova-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 call plug#end()
