@@ -6,7 +6,7 @@
 
 ########## Variables
 
-dir=~/Development/personal/other/dotfiles                    # dotfiles directory
+dir=~/Development/src/github.com/karanthukral/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="vimrc zshrc gitconfig tmux.conf zpreztorc zprofile"    # list of files/folders to symlink in homedir
 

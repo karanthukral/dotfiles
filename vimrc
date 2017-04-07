@@ -2,6 +2,8 @@ syntax enable " syntax highlighting
 
 let g:jsx_ext_required = 0 "jsx syntax for js files
 
+set term=xterm-256color " issue with colourschemes?
+
 " Theme
 colorscheme tender
 

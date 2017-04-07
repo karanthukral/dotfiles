@@ -49,4 +49,4 @@ subup = submodule update --init --recursive
 [github]
 	user = karanthukral
 [commit]
-	gpgsign = true
+	;gpgsign = true

@@ -28,6 +28,7 @@ export PATH="/Applications/chktex-1.6.4/chktex:$PATH"
 export PATH=/usr/local/bin:$PATH
 export GOPATH="/Users/karan/Development"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/go/bin 
 
 # Make sure tmux uses all colors
 alias tmux="TERM=screen-256color tmux -2"
@@ -38,8 +39,6 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 # Source
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 # added by devctl command
 [ -f /opt/devctl/devctl.sh ] && source /opt/devctl/devctl.sh
