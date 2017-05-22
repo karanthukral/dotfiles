@@ -5,7 +5,7 @@ let g:jsx_ext_required = 0 "jsx syntax for js files
 set term=xterm-256color " issue with colourschemes?
 
 " Theme
-colorscheme tender
+colorscheme dracula
 
 " Leader Commands
 let mapleader=","
@@ -110,8 +110,5 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'jacoborus/tender'
-Plug 'trevordmiller/nova-vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+Plug 'dracula/vim'
 call plug#end()

@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 alias bx="bundle exec"
 alias subl="open -a \"Sublime Text\""
+alias atomb="open -a \"Atom Beta\""
 alias texmaker="open -a \"texmaker\""
 alias vi="vim"
 alias vu="vagrant up"
@@ -26,6 +27,7 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/Users/karan/Development/golang/go/bin:$PATH"
 export PATH="/Applications/chktex-1.6.4/chktex:$PATH"
 export PATH=/usr/local/bin:$PATH
+export PATH="/Users/karan/Development/bin:$PATH"
 export GOPATH="/Users/karan/Development"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:/usr/local/go/bin 
@@ -45,3 +47,12 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 export NVM_DIR="/Users/karan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# direnv - using in monkey-lang book
+eval "$(direnv hook zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/karan/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/karan/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/karan/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/karan/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
